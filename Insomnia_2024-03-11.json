@@ -1,0 +1,320 @@
+{
+    "_type": "export",
+    "__export_format": 4,
+    "__export_date": "2024-03-11T17:43:37.576Z",
+    "__export_source": "insomnia.desktop.app:v8.6.1",
+    "resources": [
+        {
+            "_id": "req_a9ee43e8f3de4a2ea32966787ed8d0bd",
+            "parentId": "wrk_8e8b770fd2534d23911df5894683f2f7",
+            "modified": 1710173617318,
+            "created": 1710166033889,
+            "url": "http://localhost:8000/api/register",
+            "name": "Register user",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"name\": \"{% faker 'name', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'en' %}\",\n\t\"email\": \"{% faker 'internet', '', '', '', '', '', '', '', '', '', '', '', '', '', 'email', '', '', '', '', '', '', '', '', '', '', '', 'en' %}\",\n\t\"password\": \"123\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "insomnia/8.6.1"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1710166033889,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "wrk_8e8b770fd2534d23911df5894683f2f7",
+            "parentId": null,
+            "modified": 1710125332615,
+            "created": 1710125332615,
+            "name": "Vacation",
+            "description": "",
+            "scope": "collection",
+            "_type": "workspace"
+        },
+        {
+            "_id": "req_2911440aacb345d58b90bea1599141b6",
+            "parentId": "wrk_8e8b770fd2534d23911df5894683f2f7",
+            "modified": 1710175502754,
+            "created": 1710166017996,
+            "url": "http://localhost:8000/api/login",
+            "name": "Login user",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"email\": \"Sheridan70@gmail.com\",\n\t\"password\": \"123\" \n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "insomnia/8.6.1"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1710166017996,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_07722427f6ff4e708cc845592bafc89e",
+            "parentId": "wrk_8e8b770fd2534d23911df5894683f2f7",
+            "modified": 1710175766529,
+            "created": 1710126718383,
+            "url": "{{ _.base_url }}/6",
+            "name": "Delete a holiday plan",
+            "description": "",
+            "method": "DELETE",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "User-Agent",
+                    "value": "insomnia/8.6.1"
+                }
+            ],
+            "authentication": {
+                "type": "bearer",
+                "token": "3|Dhl68uWfNfY8KACByCmJlL1SAnw5XFdEKE9boP6A70e38a22"
+            },
+            "metaSortKey": -1710126718383,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_bb538ad8ef4c44f49f98653eab0192df",
+            "parentId": "wrk_8e8b770fd2534d23911df5894683f2f7",
+            "modified": 1710175755223,
+            "created": 1710126632686,
+            "url": "{{ _.base_url }}/6",
+            "name": "Update an existing holiday plan",
+            "description": "",
+            "method": "PUT",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n  \"title\": \"Modificado\",\n  \"description\": \"{% faker 'company', '', '', '', '', 'bs', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'en' %}\",\n  \"date\": \"2024-03-11\",\n  \"location\": \"{% faker 'address', 'cityName', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'en' %}\"\n}\n"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "insomnia/8.6.1"
+                }
+            ],
+            "authentication": {
+                "type": "bearer",
+                "token": "3|Dhl68uWfNfY8KACByCmJlL1SAnw5XFdEKE9boP6A70e38a22"
+            },
+            "metaSortKey": -1710126632686,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_f83ff3ebb6ca4ab8bd2f1f27b0567a7f",
+            "parentId": "wrk_8e8b770fd2534d23911df5894683f2f7",
+            "modified": 1710175733382,
+            "created": 1710126615477,
+            "url": "{{ _.base_url }}/6",
+            "name": "Retrieve a specific holiday plan by ID",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "User-Agent",
+                    "value": "insomnia/8.6.1"
+                }
+            ],
+            "authentication": {
+                "type": "bearer",
+                "token": "3|Dhl68uWfNfY8KACByCmJlL1SAnw5XFdEKE9boP6A70e38a22"
+            },
+            "metaSortKey": -1710126615477,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_2488d238edd44d029c0a00d4fcc63329",
+            "parentId": "wrk_8e8b770fd2534d23911df5894683f2f7",
+            "modified": 1710175704106,
+            "created": 1710126555694,
+            "url": "{{ _.base_url }}",
+            "name": "Retrieve all holiday plans",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "User-Agent",
+                    "value": "insomnia/8.6.1"
+                }
+            ],
+            "authentication": {
+                "type": "bearer",
+                "token": "3|Dhl68uWfNfY8KACByCmJlL1SAnw5XFdEKE9boP6A70e38a22"
+            },
+            "metaSortKey": -1710126555694,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_93e0806a636743089d33b12c99648587",
+            "parentId": "wrk_8e8b770fd2534d23911df5894683f2f7",
+            "modified": 1710176188988,
+            "created": 1710126024111,
+            "url": "{{ _.base_url }}",
+            "name": "Create a new holiday plan",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n  \"title\": \"Férias de Junho\",\n  \"description\": \"Ir para a praia\",\n  \"date\": \"2024-03-11\",\n  \"location\": \"Ponta Negra\"\n}\n"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "insomnia/8.6.1"
+                }
+            ],
+            "authentication": {
+                "type": "bearer",
+                "token": "3|Dhl68uWfNfY8KACByCmJlL1SAnw5XFdEKE9boP6A70e38a22"
+            },
+            "metaSortKey": -1710126024111,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "env_73341e158af2cbf5412cc51fdd37ada5368166aa",
+            "parentId": "wrk_8e8b770fd2534d23911df5894683f2f7",
+            "modified": 1710126083477,
+            "created": 1710125332617,
+            "name": "Base Environment",
+            "data": {
+                "base_url": "http://localhost:8000/api/vacation"
+            },
+            "dataPropertyOrder": {
+                "&": [
+                    "base_url"
+                ]
+            },
+            "color": null,
+            "isPrivate": false,
+            "metaSortKey": 1710125332617,
+            "_type": "environment"
+        },
+        {
+            "_id": "jar_73341e158af2cbf5412cc51fdd37ada5368166aa",
+            "parentId": "wrk_8e8b770fd2534d23911df5894683f2f7",
+            "modified": 1710173524896,
+            "created": 1710125332619,
+            "name": "Default Jar",
+            "cookies": [
+                {
+                    "key": "XSRF-TOKEN",
+                    "value": "eyJpdiI6InBzMGZub3dtY3hwQ2dLR1RMZ1Z1MWc9PSIsInZhbHVlIjoiMXhLUmQxRGxEK0JxdGUrTEtjL1RQalFSZ0VWcEJqRytNQlVNSytyVXlBOUZoQkJ3SnJid0tTMDRPd3RYdWJUZXFGYjBmZG5ZZGZQWWo0TlRVNVVNeGFXSnB2K1gvdW1sU0NXZkZwc21DdVEzQ3IxVGNCTmQ4NlBTV1l5NmZNQjMiLCJtYWMiOiJmMGIzYWQ0MWVjNGMzM2VkYjliNjM0ZWNiYTI0YWFmMGUxZWMxMmI3NDcxNjZkMzhkY2QzMjNiZmQ1M2E0NTNjIiwidGFnIjoiIn0%3D",
+                    "expires": "2024-03-11T18:12:04.000Z",
+                    "maxAge": 7200,
+                    "domain": "localhost",
+                    "path": "/",
+                    "hostOnly": true,
+                    "creation": "2024-03-11T14:20:27.925Z",
+                    "lastAccessed": "2024-03-11T16:12:04.896Z",
+                    "sameSite": "lax",
+                    "id": "60e11438-b965-4bca-bb30-abb2bdfe3c58"
+                },
+                {
+                    "key": "laravel_session",
+                    "value": "eyJpdiI6Ikx2UkY0T2g0eGVnUTdCRm5jeHpMTWc9PSIsInZhbHVlIjoiZDI3eGRwbTlHRzZxeEp4Nm5HMXc4UCtxL013VHFOenlreVdyeTRpanMyT2I3TFEyT0hpTFFyVTNVQ24xZjNZbWVyMW4yN0JxTHU3ZEExcTBqOU5FRExPZzBFMEdXUWFkbWNDMGpjWFdtVmpvYkRkUWtDb2t5b24wSG9kWTdUeUQiLCJtYWMiOiJlNGZlNTc5N2FkY2UyNGYxMjY5YzQ1MjA0Y2M2NWU2OWZkYWE5MzdmNWMyM2Y0MThmZjcxMzg1NTU1MmI5NTRhIiwidGFnIjoiIn0%3D",
+                    "expires": "2024-03-11T18:12:04.000Z",
+                    "maxAge": 7200,
+                    "domain": "localhost",
+                    "path": "/",
+                    "httpOnly": true,
+                    "hostOnly": true,
+                    "creation": "2024-03-11T14:20:27.926Z",
+                    "lastAccessed": "2024-03-11T16:12:04.896Z",
+                    "sameSite": "lax",
+                    "id": "2205a9f5-6d64-4b6e-86a6-ccc49ca2d411"
+                }
+            ],
+            "_type": "cookie_jar"
+        }
+    ]
+}
