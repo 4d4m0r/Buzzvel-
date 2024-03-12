@@ -71,7 +71,8 @@ class VacationController extends Controller
         if ($vacation == null) {
             return response()->json(["message" => "Vacation not found!"], 404);
         } else {
-            return Vacation::findOrFail($id)->delete();
+            Vacation::findOrFail($id)->delete();
+            return response()->json(["message"=> "Vacation deleted!"], 200);
         }
     }
 
